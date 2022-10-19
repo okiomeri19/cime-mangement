@@ -1,0 +1,68 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+    <link background-image:href="{%static 'img/police.jpg'%}">
+    <meta charset="UTF-8">
+    <title>Peter Okiomeri </title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+     
+      <span class="logo_name">DCI KISII COUNTY HOMEPAGE</span>
+    </div>
+      <ul class="nav-links">
+        <li>
+          <a href="#" class="active">
+            <i class='bx bx-grid-alt' ></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+        </li>
+        <li>
+            <a href="/register">
+              <i class='bx bx-pen' ></i>
+              <span class="links_name">Register</span>
+            </a>
+          </li>
+        <li>
+          <a href="/login">
+            <i class='bx bx-book' ></i>
+            <span class="links_name">Login</span>
+          </a>
+        </li>
+      
+       
+        
+      </ul>
+  </div>
+ 
+  <section class="home-section">
+   
+   <nav>
+    
+      <span class="dashboard"><b>REPORT WITH US A CRIME</b></span>
+      
+</body>
+    </div>
+  </nav>
+  </section>
+  <script>
+      let sidebar = document.querySelector(".sidebar");
+   let sidebarBtn = document.querySelector(".sidebarBtn");
+   sidebarBtn.onclick = function() {
+     sidebar.classList.toggle("active");
+     if(sidebar.classList.contains("active")){
+     sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+   }else
+     sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+   }
+    </script>
+    
+</html>

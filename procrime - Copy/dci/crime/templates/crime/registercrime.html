@@ -1,0 +1,38 @@
+
+{%block content%}
+{% load crispy_forms_tags %}  
+  <form action="post">
+    {%csrf_token%}
+  <div class="container py-5">
+    <head>
+    {%load static%}
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'report.css'%}">
+    <h1>Register Crime Here</h1>
+  </head>
+    <p><b>Please fill this form to enable us arrive crime scene and take quick action</b></p>
+    <hr>
+    <form>
+    <label for="location"><b>Location</b></label>
+    <input type="text" placeholder="Enter your location e.g nearest school,market and any other landmark" name="Location" id="Location" required>
+
+    <label for="nearest_police_post"><b>Nearest Police Post</b></label>
+    <input type="text" placeholder="Enter nearest police post name" name="  Nearest_police_post" id="  Nearest_police_post" required>
+
+    <div> <label for="summary"><b>Brief Summary of crime</b></label></div>
+    <textarea id="story" name="summary_of_crime"
+              rows="10" cols="100">
+    </textarea>
+  <div>
+    <label for="avatar"><b>Upload Evidence:</b></label>
+  </div>
+    
+
+<input type="file" placeholder="Upload any form of evidence if exists"
+       id="evidence" name="evidence"
+       accept="image/png, image/jpeg,video/mp3,mp4">
+    <button class="btn btn-primary" type="submit">Submit</button>
+    <hr>
+  </div>
+</form>
+{% endblock %}
